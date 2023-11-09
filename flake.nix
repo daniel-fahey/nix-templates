@@ -5,7 +5,7 @@
     templates = {
       python-cuda = {
         path = ./python-cuda;
-        description = "python environment with CUDA";
+        description = "Python environment with CUDA";
       };
 
     };

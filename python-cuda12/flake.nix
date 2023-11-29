@@ -1,5 +1,5 @@
 {
-  description = "A basic flake with a shell";
+  description = "Flake for a Python CUDA 12 development shell";
   inputs.nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
 
   nixConfig = {

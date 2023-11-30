@@ -1,19 +1,28 @@
 # nix-python-cuda
 
-## Getting started
+## Getting started 🚀
 
-Open the `devShell` shell using:
+### Linking the devShell to a GC Root 🌱
+
+Whenever you want to enter your development environment, use:
+
+```bash
+nix develop --profile .nix/devshell-profile
 ```
-$ nix develop
+
+📝 **Note**: This will generate symlinks that point to the Nix store path of your dev environment.
+
+### Cleaning Up 🧹
+
+- If you ever wish to remove the dev environment, delete the symlinks:
+
+```bash
+rm .nix/devshell-profile*
 ```
 
-## Package versions
+After this, the next garbage collection cycle will clean up the environment in the Nix store.
 
-| package | ver    |
-| ------- | ------ |
-| python  | 3.11.5 |
-| CUDA    | 12.1.0 |
-| cuDNN   | 8.9.1  |
+This ensures you're always working within the protected dev environment.
 
 ## n.b.
 

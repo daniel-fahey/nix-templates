@@ -2,27 +2,12 @@
 
 ## Getting started 🚀
 
-### Linking the devShell to a GC Root 🌱
+Use [`nix-direnv`](https://github.com/nix-community/nix-direnv) and the development shell will automatically activate
 
-Whenever you want to enter your development environment, use:
-
+Install Python dependencies with
 ```bash
-nix develop --profile .nix/devshell-profile
+poetry install --no-root
 ```
-
-📝 **Note**: This will generate symlinks that point to the Nix store path of your dev environment.
-
-### Cleaning Up 🧹
-
-- If you ever wish to remove the dev environment, delete the symlinks:
-
-```bash
-rm .nix/devshell-profile*
-```
-
-After this, the next garbage collection cycle will clean up the environment in the Nix store.
-
-This ensures you're always working within the protected dev environment.
 
 ## n.b.
 

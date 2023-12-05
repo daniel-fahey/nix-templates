@@ -22,29 +22,16 @@
         config.cudaSupport = true;
       };
 
-      cudaPkgs = pkgs.cudaPackages_12_1;
-
       basicTools = with pkgs; [
         python3
         poetry
-        stdenv.cc.cc.lib
       ];
 
-      cudaTools = with cudaPkgs; [
-        cuda_cudart
-        cuda_cupti
-        cuda_nvcc
-        cuda_nvrtc
-        cuda_nvtx
-        cudnn
-        libcublas
-        libcufft
-        libcurand
-        libcusparse
-        nccl
+      gpuPackages = with pkgs.python3Packages; [
+        torch
       ];
 
-      devShellTools = basicTools ++ cudaTools;
+      devShellTools = basicTools ++ gpuPackages;
 
     in {
       devShell.x86_64-linux = pkgs.mkShell {
@@ -52,15 +39,11 @@
 
         LD_LIBRARY_PATH = pkgs.lib.makeLibraryPath devShellTools;
 
-        shellHook = ''        
-          if ! poetry run python -c "import torch" >/dev/null 2>&1; then
-            echo "'torch' not found in the poetry environment. Running 'poetry install'..."
-            poetry install
-          fi
-          echo "Activating poetry environment..."
-          poetry run python -c 'import torch; assert torch.cuda.is_available(), "CUDA is not available"; x = torch.rand(10, device="cuda"); print(x)'
-          poetry shell
-        '';
+        POETRY_VIRTUALENVS_IN_PROJECT = "true";
+        POETRY_VIRTUALENVS_PATH = "{project-dir}/.venv";
+
+        POETRY_VIRTUALENVS_PREFER_ACTIVE_PYTHON = "true";
+
       };
     };
 }

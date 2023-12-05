@@ -1,13 +1,13 @@
 [tool.poetry]
-name = "pydirenv"
+name = "python-cuda12"
 version = "0.1.0"
 description = ""
-authors = ["Your Name <you@example.com>"]
+authors = ["Daniel Fahey <daniel.fahey@pm.me>"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
 python = "^3.11"
-torch = "2.1.0"
+torch = "^2.1.1"
 numpy = "^1.26.2"
 
 

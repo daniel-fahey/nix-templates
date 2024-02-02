@@ -18,12 +18,19 @@
 
       pkgs = import nixpkgs {
         inherit system;
-        config.allowUnfree = true;
-        config.cudaSupport = true;
+        config = {
+          allowUnfree = true;
+          cudaSupport = true;
+        };
+      };
+
+      optimizedPython = pkgs.python3.override {
+        enableOptimizations = true;
+        reproducibleBuild = false;
       };
 
       basicTools = with pkgs; [
-        python3
+        optimizedPython
         poetry
       ];
 
@@ -35,6 +42,9 @@
 
     in {
       devShell.x86_64-linux = pkgs.mkShell {
+        
+        hardeningDisable = ["all"];
+
         buildInputs = devShellTools;
 
         LD_LIBRARY_PATH = pkgs.lib.makeLibraryPath devShellTools;

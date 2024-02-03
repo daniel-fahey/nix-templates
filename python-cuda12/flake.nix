@@ -36,6 +36,7 @@
 
       gpuPackages = with pkgs.python3Packages; [
         torch
+        torchvision
       ];
 
       devShellTools = basicTools ++ gpuPackages;

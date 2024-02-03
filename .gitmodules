@@ -1,0 +1,3 @@
+[submodule "python-cuda12/ComfyUI"]
+	path = python-cuda12/ComfyUI
+	url = https://github.com/comfyanonymous/ComfyUI

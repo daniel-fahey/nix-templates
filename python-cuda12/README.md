@@ -12,3 +12,8 @@ poetry install --no-root
 ## n.b.
 
 - Add external projects as [submodules](https://git-scm.com/book/en/v2/Git-Tools-Submodules)
+
+```bash
+cd ComfyUI
+ln -s ../custom_nodes/ .
+```

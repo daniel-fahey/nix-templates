@@ -4,3 +4,6 @@
 [submodule "python-cuda12/custom_nodes/comfyui-workspace-manager"]
 	path = python-cuda12/custom_nodes/comfyui-workspace-manager
 	url = https://github.com/11cafe/comfyui-workspace-manager
+[submodule "python-cuda12/custom_nodes/ComfyUI-Manager"]
+	path = python-cuda12/custom_nodes/ComfyUI-Manager
+	url = https://github.com/ltdrdata/ComfyUI-Manager.git

@@ -7,3 +7,6 @@
 [submodule "python-cuda12/custom_nodes/ComfyUI-Manager"]
 	path = python-cuda12/custom_nodes/ComfyUI-Manager
 	url = https://github.com/ltdrdata/ComfyUI-Manager.git
+[submodule "python-cuda12/custom_nodes/ComfyUI_essentials"]
+	path = python-cuda12/custom_nodes/ComfyUI_essentials
+	url = https://github.com/cubiq/ComfyUI_essentials

@@ -16,3 +16,6 @@
 [submodule "python-cuda12/custom_nodes/comfyui_controlnet_aux"]
 	path = python-cuda12/custom_nodes/comfyui_controlnet_aux
 	url = https://github.com/Fannovel16/comfyui_controlnet_aux.git
+[submodule "python-cuda12/custom_nodes/ComfyUI_IPAdapter_plus"]
+	path = python-cuda12/custom_nodes/ComfyUI_IPAdapter_plus
+	url = https://github.com/cubiq/ComfyUI_IPAdapter_plus.git

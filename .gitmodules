@@ -10,3 +10,9 @@
 [submodule "python-cuda12/custom_nodes/ComfyUI_essentials"]
 	path = python-cuda12/custom_nodes/ComfyUI_essentials
 	url = https://github.com/cubiq/ComfyUI_essentials
+[submodule "python-cuda12/custom_nodes/ComfyUI_Noise"]
+	path = python-cuda12/custom_nodes/ComfyUI_Noise
+	url = https://github.com/BlenderNeko/ComfyUI_Noise
+[submodule "python-cuda12/custom_nodes/comfyui_controlnet_aux"]
+	path = python-cuda12/custom_nodes/comfyui_controlnet_aux
+	url = https://github.com/Fannovel16/comfyui_controlnet_aux.git

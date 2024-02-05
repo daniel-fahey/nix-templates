@@ -32,11 +32,16 @@
       basicTools = with pkgs; [
         optimizedPython
         poetry
+        libGL
+        glib
       ];
 
       gpuPackages = with pkgs.python3Packages; [
         torch
         torchvision
+        # opencv4
+        matplotlib
+        scikit-image
       ];
 
       devShellTools = basicTools ++ gpuPackages;
@@ -49,6 +54,7 @@
         buildInputs = devShellTools;
 
         LD_LIBRARY_PATH = pkgs.lib.makeLibraryPath devShellTools;
+        # LD_LIBRARY_PATH = "${with pkgs; lib.makeLibraryPath devShellTools}:/run/opengl-driver/lib";
 
         POETRY_VIRTUALENVS_IN_PROJECT = "true";
         POETRY_VIRTUALENVS_PATH = "{project-dir}/.venv";

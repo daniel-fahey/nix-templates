@@ -15,5 +15,6 @@ poetry install --no-root
 
 ```bash
 cd ComfyUI
+rm -rf custom_nodes
 ln -s ../custom_nodes/ .
 ```

@@ -22,3 +22,6 @@
 [submodule "python-cuda12/custom_nodes/LCM_Inpaint_Outpaint_Comfy"]
 	path = python-cuda12/custom_nodes/LCM_Inpaint_Outpaint_Comfy
 	url = https://github.com/taabata/LCM_Inpaint_Outpaint_Comfy.git
+[submodule "python-cuda12/custom_nodes/was-node-suite-comfyui"]
+	path = python-cuda12/custom_nodes/was-node-suite-comfyui
+	url = https://github.com/WASasquatch/was-node-suite-comfyui/

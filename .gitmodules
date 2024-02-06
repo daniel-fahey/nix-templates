@@ -19,3 +19,6 @@
 [submodule "python-cuda12/custom_nodes/ComfyUI_IPAdapter_plus"]
 	path = python-cuda12/custom_nodes/ComfyUI_IPAdapter_plus
 	url = https://github.com/cubiq/ComfyUI_IPAdapter_plus.git
+[submodule "python-cuda12/custom_nodes/LCM_Inpaint_Outpaint_Comfy"]
+	path = python-cuda12/custom_nodes/LCM_Inpaint_Outpaint_Comfy
+	url = https://github.com/taabata/LCM_Inpaint_Outpaint_Comfy.git

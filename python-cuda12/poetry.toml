@@ -1,0 +1,7 @@
+[virtualenvs]
+in-project = true
+path = "{project-dir}/.venv"
+prefer-active-python = true
+
+[virtualenvs.options]
+system-site-packages = true

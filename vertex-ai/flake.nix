@@ -27,6 +27,7 @@
           chromadb
           google-cloud-bigquery
           google-cloud-aiplatform
+          numexpr # langchain's LLMMathChain requires the numexpr package
         ];
 
         commandLinePkgs = with pkgs; [
